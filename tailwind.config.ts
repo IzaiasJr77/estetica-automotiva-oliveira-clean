@@ -63,21 +63,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cores personalizadas para OLIVEIRA CLEAN
-				'gold': {
-					50: '#fffbeb',
-					100: '#fef3c7',
-					200: '#fde68a',
-					300: '#fcd34d',
-					400: '#fbbf24',
-					500: '#f59e0b',
-					600: '#d97706',
-					700: '#b45309',
-					800: '#92400e',
-					900: '#78350f',
-				},
-				'luxury-black': '#0a0a0a',
-				'luxury-white': '#fafafa',
+				// Cores atualizadas para OLIVEIRA CLEAN
+				'premium-gold': '#FFD700',
+				'deep-black': '#0E0E0E',
+				'pure-white': '#FFFFFF',
+				'elegant-gray': '#D3D3D3',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -138,8 +128,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite'
 			},
 			fontFamily: {
-				'display': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'display': ['Montserrat', 'sans-serif'],
+				'sans': ['Lato', 'system-ui', 'sans-serif'],
 			}
 		}
 	},
