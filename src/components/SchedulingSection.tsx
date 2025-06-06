@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,36 +11,33 @@ import { useToast } from '@/hooks/use-toast';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { cn } from '@/lib/utils';
-
 const SchedulingSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     carModel: '',
     date: undefined as Date | undefined,
     time: ''
   });
-
-  const timeSlots = [
-    '08:00', '09:00', '10:00', '11:00', '12:00',
-    '13:00', '14:00', '15:00', '16:00', '17:00'
-  ];
-
+  const timeSlots = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'];
   const handleInputChange = (field: string, value: string | Date | undefined) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
   const formatWhatsAppMessage = () => {
-    const formattedDate = formData.date ? format(formData.date, 'dd/MM/yyyy', { locale: ptBR }) : '[DATA]';
-    
+    const formattedDate = formData.date ? format(formData.date, 'dd/MM/yyyy', {
+      locale: ptBR
+    }) : '[DATA]';
     const message = `Olá, gostaria de agendar uma lavagem para meu carro ${formData.carModel || '[MODELO]'} no dia ${formattedDate} às ${formData.time || '[HORA]'}.`;
-    
     return encodeURIComponent(message);
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.name || !formData.carModel || !formData.date || !formData.time) {
       toast({
@@ -51,20 +47,15 @@ const SchedulingSection = () => {
       });
       return;
     }
-
     const message = formatWhatsAppMessage();
     const whatsappUrl = `https://wa.me/5511975209844?text=${message}`;
-    
     window.open(whatsappUrl, '_blank');
-    
     toast({
       title: "Redirecionando para WhatsApp",
-      description: "Você será redirecionado para o WhatsApp para confirmar seu agendamento.",
+      description: "Você será redirecionado para o WhatsApp para confirmar seu agendamento."
     });
   };
-
-  return (
-    <section id="agendamento" className="py-20 bg-gradient-to-b from-deep-black to-gray-900">
+  return <section id="agendamento" className="py-20 bg-gradient-to-b from-deep-black to-gray-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Contact Info */}
@@ -109,20 +100,10 @@ const SchedulingSection = () => {
 
             {/* Social Links */}
             <div>
-              <h3 className="font-semibold text-pure-white mb-4 font-display">Siga-nos nas redes sociais</h3>
+              
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-br hover:from-premium-gold hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 group"
-                >
-                  <Instagram className="w-6 h-6 text-elegant-gray group-hover:text-deep-black" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-br hover:from-premium-gold hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 group"
-                >
-                  <Facebook className="w-6 h-6 text-elegant-gray group-hover:text-deep-black" />
-                </a>
+                
+                
               </div>
             </div>
           </div>
@@ -141,28 +122,14 @@ const SchedulingSection = () => {
                     <Label htmlFor="name" className="text-pure-white font-medium font-display">
                       Nome Completo *
                     </Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="bg-gray-700 border-gray-600 text-pure-white focus:border-premium-gold font-sans"
-                      placeholder="Seu nome completo"
-                      required
-                    />
+                    <Input id="name" value={formData.name} onChange={e => handleInputChange('name', e.target.value)} className="bg-gray-700 border-gray-600 text-pure-white focus:border-premium-gold font-sans" placeholder="Seu nome completo" required />
                   </div>
 
                   <div>
                     <Label htmlFor="carModel" className="text-pure-white font-medium font-display">
                       Modelo do Carro *
                     </Label>
-                    <Input
-                      id="carModel"
-                      value={formData.carModel}
-                      onChange={(e) => handleInputChange('carModel', e.target.value)}
-                      className="bg-gray-700 border-gray-600 text-pure-white focus:border-premium-gold font-sans"
-                      placeholder="Ex: Toyota Corolla 2020"
-                      required
-                    />
+                    <Input id="carModel" value={formData.carModel} onChange={e => handleInputChange('carModel', e.target.value)} className="bg-gray-700 border-gray-600 text-pure-white focus:border-premium-gold font-sans" placeholder="Ex: Toyota Corolla 2020" required />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -172,26 +139,15 @@ const SchedulingSection = () => {
                       </Label>
                       <Popover>
                         <PopoverTrigger asChild>
-                          <Button
-                            variant={"outline"}
-                            className={cn(
-                              "w-full justify-start text-left font-normal bg-gray-700 border-gray-600 text-pure-white hover:bg-gray-600 font-sans",
-                              !formData.date && "text-gray-400"
-                            )}
-                          >
+                          <Button variant={"outline"} className={cn("w-full justify-start text-left font-normal bg-gray-700 border-gray-600 text-pure-white hover:bg-gray-600 font-sans", !formData.date && "text-gray-400")}>
                             <CalendarIcon className="mr-2 h-4 w-4" />
-                            {formData.date ? format(formData.date, "PPP", { locale: ptBR }) : <span>Selecione uma data</span>}
+                            {formData.date ? format(formData.date, "PPP", {
+                            locale: ptBR
+                          }) : <span>Selecione uma data</span>}
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0 bg-gray-800 border-gray-600" align="start">
-                          <Calendar
-                            mode="single"
-                            selected={formData.date}
-                            onSelect={(date) => handleInputChange('date', date)}
-                            disabled={(date) => date < new Date()}
-                            initialFocus
-                            className="bg-gray-800 text-pure-white"
-                          />
+                          <Calendar mode="single" selected={formData.date} onSelect={date => handleInputChange('date', date)} disabled={date => date < new Date()} initialFocus className="bg-gray-800 text-pure-white" />
                         </PopoverContent>
                       </Popover>
                     </div>
@@ -200,25 +156,20 @@ const SchedulingSection = () => {
                       <Label htmlFor="time" className="text-pure-white font-medium font-display">
                         Horário Preferido *
                       </Label>
-                      <Select value={formData.time} onValueChange={(value) => handleInputChange('time', value)}>
+                      <Select value={formData.time} onValueChange={value => handleInputChange('time', value)}>
                         <SelectTrigger className="bg-gray-700 border-gray-600 text-pure-white focus:border-premium-gold font-sans">
                           <SelectValue placeholder="Selecione o horário" />
                         </SelectTrigger>
                         <SelectContent className="bg-gray-700 border-gray-600">
-                          {timeSlots.map((time) => (
-                            <SelectItem key={time} value={time} className="text-pure-white hover:bg-premium-gold hover:text-deep-black font-sans">
+                          {timeSlots.map(time => <SelectItem key={time} value={time} className="text-pure-white hover:bg-premium-gold hover:text-deep-black font-sans">
                               {time}
-                            </SelectItem>
-                          ))}
+                            </SelectItem>)}
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
-                  <Button 
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-premium-gold to-yellow-500 hover:from-yellow-500 hover:to-premium-gold text-deep-black font-bold py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 font-display"
-                  >
+                  <Button type="submit" className="w-full bg-gradient-to-r from-premium-gold to-yellow-500 hover:from-yellow-500 hover:to-premium-gold text-deep-black font-bold py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 font-display">
                     Agendar via WhatsApp
                   </Button>
                 </form>
@@ -227,8 +178,6 @@ const SchedulingSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SchedulingSection;
