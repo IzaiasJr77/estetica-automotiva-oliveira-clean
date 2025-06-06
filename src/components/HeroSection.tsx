@@ -29,7 +29,7 @@ const HeroSection = () => {
           {/* Logo */}
           <div className="mb-8 flex justify-center">
             <div className="w-32 h-32 bg-gradient-to-br from-premium-gold to-yellow-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform duration-300 p-2">
-              <img src="/lovable-uploads/182dcfde-3498-4e65-af52-cb04b9e37720.png" alt="OLIVEIRA CLEAN Logo" className="w-full h-full object-fill" />
+              <img src="/lovable-uploads/182dcfde-3498-4e65-af52-cb04b9e37720.png" alt="OLIVEIRA CLEAN Logo" className="w-full h-full object-cover" />
             </div>
           </div>
 
