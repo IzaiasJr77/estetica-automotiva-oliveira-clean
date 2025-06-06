@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com/oliveira_clean10" 
+                href="https://www.instagram.com/oliveira.clean/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-br hover:from-premium-gold hover:to-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 group"
@@ -46,7 +46,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <div className="w-4 h-4 bg-premium-gold rounded-full mt-1 flex-shrink-0"></div>
                 <div className="text-gray-400">
-                  <p>Avenida Bariloche, nº 01</p>
+                  <p>Avenida Bariloche, nº 03</p>
                   <p>Jardim Maria Helena</p>
                   <p>Barueri/SP</p>
                   <p>CEP: 06445-040</p>
@@ -74,14 +74,14 @@ const Footer = () => {
           <h4 className="font-semibold text-pure-white mb-4 font-display text-center">Nossa Localização</h4>
           <div className="w-full h-64 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.123456789!2d-46.8765432109876!3d-23.5123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzQ0LjQiUyA0NsKwNTInMzUuNiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr&q=Avenida+Bariloche,+01+-+Jardim+Maria+Helena,+Barueri+-+SP,+06445-040"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1234567890!2d-46.8765432!3d-23.5123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf01b8b8b8b8b8%3A0x1234567890abcdef!2sOliveira%20Clean%20Est%C3%A9tica%20Automotiva%20e%20Higieniza%C3%A7%C3%A3o%20de%20Estofados!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização OLIVEIRA CLEAN"
+              title="Oliveira Clean Estética Automotiva e Higienização de Estofados"
             ></iframe>
           </div>
         </div>

@@ -46,6 +46,26 @@ const GallerySection = () => {
       src: "/lovable-uploads/707581ae-1b38-4914-88be-568b86ea4a1c.png",
       alt: "Volkswagen com tratamento especializado",
       category: "Tratamento Especial"
+    },
+    {
+      src: "/lovable-uploads/c899a03e-c495-46fc-a73f-84dde0275816.png",
+      alt: "Honda vermelha após lavagem completa",
+      category: "Lavagem Completa"
+    },
+    {
+      src: "/lovable-uploads/51157461-6317-40c7-b853-9ba20b88dcc7.png",
+      alt: "Processo de lavagem de chassi profissional",
+      category: "Lavagem de Chassi"
+    },
+    {
+      src: "/lovable-uploads/9680aaca-3648-40ef-a192-acd1f53c2aba.png",
+      alt: "Volkswagen Amarok com higienização interna completa",
+      category: "Higienização"
+    },
+    {
+      src: "/lovable-uploads/9f347c08-d6f6-43de-9ba7-949bb98e6f62.png",
+      alt: "Mitsubishi durante processo de lavagem",
+      category: "Lavagem Completa"
     }
   ];
 
