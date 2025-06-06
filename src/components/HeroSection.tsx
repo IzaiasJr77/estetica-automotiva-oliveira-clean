@@ -1,16 +1,14 @@
-
 import { Button } from '@/components/ui/button';
-
 const HeroSection = () => {
   const scrollToAgendamento = () => {
     const element = document.getElementById('agendamento');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-deep-black via-gray-900 to-deep-black">
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-deep-black via-gray-900 to-deep-black">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,215,0,0.1),transparent_50%)]"></div>
@@ -19,19 +17,19 @@ const HeroSection = () => {
 
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-premium-gold rounded-full animate-float"></div>
-      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-premium-gold rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-premium-gold rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-premium-gold rounded-full animate-float" style={{
+      animationDelay: '1s'
+    }}></div>
+      <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-premium-gold rounded-full animate-float" style={{
+      animationDelay: '2s'
+    }}></div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Logo */}
           <div className="mb-8 flex justify-center">
             <div className="w-32 h-32 bg-gradient-to-br from-premium-gold to-yellow-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-transform duration-300 p-2">
-              <img 
-                src="/lovable-uploads/182dcfde-3498-4e65-af52-cb04b9e37720.png" 
-                alt="OLIVEIRA CLEAN Logo" 
-                className="w-full h-full object-contain"
-              />
+              <img src="/lovable-uploads/182dcfde-3498-4e65-af52-cb04b9e37720.png" alt="OLIVEIRA CLEAN Logo" className="w-full h-full object-fill" />
             </div>
           </div>
 
@@ -62,17 +60,12 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              onClick={scrollToAgendamento}
-              className="bg-premium-gold hover:bg-yellow-500 text-deep-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-premium-gold/25 font-display"
-            >
+            <Button onClick={scrollToAgendamento} className="bg-premium-gold hover:bg-yellow-500 text-deep-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-premium-gold/25 font-display">
               Agendar Serviço
             </Button>
-            <Button 
-              variant="outline"
-              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-premium-gold text-premium-gold hover:bg-premium-gold hover:text-deep-black font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 font-display"
-            >
+            <Button variant="outline" onClick={() => document.getElementById('servicos')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="border-premium-gold text-premium-gold hover:bg-premium-gold hover:text-deep-black font-semibold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 font-display">
               Nossos Serviços
             </Button>
           </div>
@@ -101,8 +94,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-premium-gold rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
