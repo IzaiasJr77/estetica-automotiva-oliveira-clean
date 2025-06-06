@@ -25,20 +25,20 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-luxury-black/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'
+      isScrolled ? 'bg-deep-black/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-gold-400 to-gold-600 rounded-lg flex items-center justify-center">
-              <span className="text-luxury-black font-bold text-xl">O</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-premium-gold to-yellow-500 rounded-lg flex items-center justify-center">
+              <span className="text-deep-black font-bold text-xl">O</span>
             </div>
             <div>
-              <h1 className="text-luxury-white font-display font-bold text-xl">
+              <h1 className="text-pure-white font-display font-bold text-xl">
                 OLIVEIRA CLEAN
               </h1>
-              <p className="text-gold-400 text-xs font-light">ESTÉTICA AUTOMOTIVA</p>
+              <p className="text-premium-gold text-xs font-light">ESTÉTICA AUTOMOTIVA</p>
             </div>
           </div>
 
@@ -46,31 +46,31 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('inicio')}
-              className="text-luxury-white hover:text-gold-400 transition-colors font-medium"
+              className="text-pure-white hover:text-premium-gold transition-colors font-medium"
             >
               Início
             </button>
             <button 
               onClick={() => scrollToSection('servicos')}
-              className="text-luxury-white hover:text-gold-400 transition-colors font-medium"
+              className="text-pure-white hover:text-premium-gold transition-colors font-medium"
             >
               Serviços
             </button>
             <button 
               onClick={() => scrollToSection('galeria')}
-              className="text-luxury-white hover:text-gold-400 transition-colors font-medium"
+              className="text-pure-white hover:text-premium-gold transition-colors font-medium"
             >
               Galeria
             </button>
             <button 
               onClick={() => scrollToSection('agendamento')}
-              className="text-luxury-white hover:text-gold-400 transition-colors font-medium"
+              className="text-pure-white hover:text-premium-gold transition-colors font-medium"
             >
               Contato
             </button>
             <Button 
               onClick={() => scrollToSection('agendamento')}
-              className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-luxury-black font-semibold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-premium-gold hover:bg-yellow-500 text-deep-black font-semibold px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Agendar Agora
             </Button>
@@ -79,16 +79,16 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-luxury-white focus:outline-none"
+            className="md:hidden text-pure-white focus:outline-none"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`bg-luxury-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              <span className={`bg-pure-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
               }`}></span>
-              <span className={`bg-luxury-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+              <span className={`bg-pure-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
                 isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}></span>
-              <span className={`bg-luxury-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              <span className={`bg-pure-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
               }`}></span>
             </div>
@@ -97,35 +97,35 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-gold-400/20">
+          <div className="md:hidden mt-4 py-4 border-t border-premium-gold/20">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="text-luxury-white hover:text-gold-400 transition-colors font-medium text-left"
+                className="text-pure-white hover:text-premium-gold transition-colors font-medium text-left"
               >
                 Início
               </button>
               <button 
                 onClick={() => scrollToSection('servicos')}
-                className="text-luxury-white hover:text-gold-400 transition-colors font-medium text-left"
+                className="text-pure-white hover:text-premium-gold transition-colors font-medium text-left"
               >
                 Serviços
               </button>
               <button 
                 onClick={() => scrollToSection('galeria')}
-                className="text-luxury-white hover:text-gold-400 transition-colors font-medium text-left"
+                className="text-pure-white hover:text-premium-gold transition-colors font-medium text-left"
               >
                 Galeria
               </button>
               <button 
                 onClick={() => scrollToSection('agendamento')}
-                className="text-luxury-white hover:text-gold-400 transition-colors font-medium text-left"
+                className="text-pure-white hover:text-premium-gold transition-colors font-medium text-left"
               >
                 Contato
               </button>
               <Button 
                 onClick={() => scrollToSection('agendamento')}
-                className="bg-gradient-to-r from-gold-400 to-gold-600 hover:from-gold-500 hover:to-gold-700 text-luxury-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 w-full"
+                className="bg-premium-gold hover:bg-yellow-500 text-deep-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 w-full"
               >
                 Agendar Agora
               </Button>

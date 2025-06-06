@@ -64,7 +64,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={scrollToAgendamento}
-              className="bg-gradient-to-r from-premium-gold to-yellow-500 hover:from-yellow-500 hover:to-premium-gold text-deep-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-premium-gold/25 font-display"
+              className="bg-premium-gold hover:bg-yellow-500 text-deep-black font-bold px-8 py-4 text-lg rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-premium-gold/25 font-display"
             >
               Agendar Serviço
             </Button>
