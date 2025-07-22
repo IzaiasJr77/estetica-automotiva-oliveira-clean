@@ -35,11 +35,9 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="font-display text-5xl md:text-7xl font-bold text-pure-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-premium-gold to-yellow-500 bg-clip-text text-transparent">
-              OLIVEIRA
-            </span>
+            
             <br />
-            <span className="text-pure-white">CLEAN</span>
+            
           </h1>
 
           {/* Tagline */}
