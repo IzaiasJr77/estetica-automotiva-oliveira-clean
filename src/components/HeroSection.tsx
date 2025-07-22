@@ -27,9 +27,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 bg-gradient-to-br from-premium-gold to-yellow-500 flex items-center justify-center transform hover:scale-110 transition-transform duration-300 p-2 rounded-lg bg-black py-0 px-0">
-              <img src="/lovable-uploads/182dcfde-3498-4e65-af52-cb04b9e37720.png" alt="OLIVEIRA CLEAN Logo" className="w-full h-full object-cover" />
+          <div className="mb-6 flex justify-center">
+            <div className="w-48 h-48 flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
+              <img src="/lovable-uploads/f5d57a41-233c-4afe-8b5c-69a178050da1.png" alt="OLIVEIRA CLEAN Logo" className="w-full h-full object-contain" />
             </div>
           </div>
 
